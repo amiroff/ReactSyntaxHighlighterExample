@@ -1,0 +1,66 @@
+body {
+  background-color: gray;
+}
+
+.App {
+  font-family: sans-serif;
+}
+code,
+pre {
+  font-family: "Fira Code", monospace !important;
+  line-height: 1.8em !important;
+  font-size: 0.94em !important;
+  margin: 0;
+  padding: 0;
+}
+
+.coding {
+  border-radius: 6px !important;
+  margin: 0 !important;
+}
+
+.copy-to-clipboard {
+  cursor: pointer;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(92, 92, 92);
+  border: none;
+  margin-right: 10px;
+  font-size: 0.7em;
+  line-height: 1em;
+}
+
+.copy-to-clipboard * {
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.copy-to-clipboard svg {
+  width: 16px;
+}
+
+.code-dark {
+  background: #1e1e1e;
+  border-radius: 6px;
+}
+
+.code-light {
+  background: #fdf6e3;
+  border-radius: 6px;
+}
+
+.code-filename {
+  color: rgb(92, 92, 92);
+  flex: 1;
+  padding: 12px;
+  font-size: 0.8em;
+  font-weight: 600;
+  font-family: "Fira Code", monospace !important;
+}
+
+.code-header {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(77, 70, 70, 0.219);
+}
