@@ -8,10 +8,11 @@ import javascript from "react-syntax-highlighter/dist/esm/languages/prism/javasc
 import python from "react-syntax-highlighter/dist/esm/languages/prism/python";
 import {
   vscDarkPlus,
-  solarizedlight
+  solarizedlight,
+  dracula
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import { codeString1, codeString2 } from "./code";
+import { codeString1, codeString2, codeString3 } from "./code";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 SyntaxHighlighter.registerLanguage("python", python);
@@ -31,7 +32,7 @@ let wrapper = (lineNumber) => {
     style.backgroundColor = "#F22E5B30";
   } else if (MARKED && MARKED.includes(lineNumber)) {
     // style.borderBottom = "1px solid #cccccc60";
-    style.borderRadius = "5px";
+    style.borderRadius = "2px";
     style.backgroundColor = "#cccccc40";
   }
   return { style };
@@ -105,11 +106,40 @@ export default function App() {
           className="coding"
           language="python"
           style={solarizedlight}
-          showLineNumbers
+          // showLineNumbers
           wrapLines
           lineProps={wrapper}
         >
           {codeString2}
+        </SyntaxHighlighter>
+      </Code>
+
+      <br />
+      <Code className="code-dark">
+        <div className="code-header">
+          <div className="code-filename">myapp/views.py</div>
+          <CopyToClipboard text={codeString2} onCopy={() => {}}>
+            <span className="copy-to-clipboard" title="Copy">
+              Copied!
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                ></path>
+              </svg>
+            </span>
+          </CopyToClipboard>
+        </div>
+        <SyntaxHighlighter className="coding" language="django" style={dracula}>
+          {codeString3}
         </SyntaxHighlighter>
       </Code>
     </div>
