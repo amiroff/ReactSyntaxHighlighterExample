@@ -1,10 +1,13 @@
 body {
-  background-color: gray;
+  margin: 0;
+  padding: 0;
 }
 
-.App {
-  font-family: sans-serif;
+.app {
+  background-color: gray;
+  padding: 1em;
 }
+
 code,
 pre {
   font-family: "Fira Code", monospace !important;
@@ -29,6 +32,8 @@ pre {
   margin-right: 10px;
   font-size: 0.7em;
   line-height: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .copy-to-clipboard * {
@@ -41,27 +46,51 @@ pre {
 }
 
 .code-dark {
-  background: #0e0c0c;
-  /* background: #1e1f25; */
+  background: #2f2f2f;
   border-radius: 6px;
 }
 
 .code-light {
-  background: #d3cdbc;
+  background: #fafafa;
   border-radius: 6px;
 }
 
 .code-filename {
-  color: rgb(92, 92, 92);
   flex: 1;
-  padding: 12px;
-  font-size: 0.8em;
-  font-weight: 600;
-  font-family: "Fira Code", monospace !important;
+  padding: 10px;
+}
+
+.code-filename span,
+.code-filename a {
+  color: rgb(117, 117, 117);
+  font-size: 0.9em;
+  font-weight: 400;
+  font-family: "Fira Code", monospace;
+}
+
+.code-filename a {
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.code-filename a:hover {
+  text-decoration: underline;
 }
 
 .code-header {
   display: flex;
   justify-content: flex-end;
-  /* border-bottom: 1px solid rgba(77, 70, 70, 0.219); */
+}
+
+.code-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 1em;
+}
+
+.code-light .code-description {
+  color: rgb(44, 44, 44);
+}
+.code-dark .code-description {
+  color: rgb(182, 182, 182);
 }
